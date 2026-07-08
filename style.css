@@ -1,0 +1,278 @@
+/* --- ESTILOS GENERALES Y RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    overflow-x: hidden;
+}
+
+/* --- 1. HEADER / BANNER SUPERIOR --- */
+.main-header {
+    background-image: url('imagenes/10.png'); /* Fondo de fresas difuminado u oscuro */
+    background-size: cover;
+    background-position: center;
+    border-bottom: 5px solid #000000;
+}
+
+.header-overlay {
+    background-color: rgba(0, 0, 0, 0.75); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.arrows {
+    color: #e5c158; /* Dorado */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo-img {
+    height: 90px;
+    object-fit: contain;
+}
+
+.header-text {
+    max-width: 500px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 300;
+    text-align: right;
+    line-height: 1.6;
+}
+
+/* --- 2. BIENVENIDA --- */
+.welcome-section {
+    padding: 60px 10%;
+    background-color: #ffffff;
+}
+
+.welcome-title {
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+.welcome-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.welcome-image-container {
+    flex: 1;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-cake {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.welcome-text {
+    flex: 1;
+    min-width: 300px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #222222;
+    text-align: justify;
+}
+
+/* --- 3. CATÁLOGO --- */
+.catalog-section {
+    background-image: url('imagenes/11.png'); /* Fondo oscuro con pastel detrás */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+/* Capa oscura interna para replicar el efecto de la maqueta */
+.catalog-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(40, 40, 40, 0.85);
+    z-index: 1;
+}
+
+.catalog-title {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.catalog-grid {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.catalog-card {
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 25px 20px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.circle-frame {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #801414; /* Borde rojizo/marrón oscuro de las fotos */
+    margin-bottom: 15px;
+}
+
+.circle-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.catalog-card h3 {
+    color: #6d0a0a; /* Color de las letras del catálogo */
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* --- 4. CONTACTO / SECCIÓN INFERIOR --- */
+.contact-section {
+    background-image: url('imagenes/12.png'); /* Fondo de bizcocho/pastel texturizado claro */
+    background-size: cover;
+    background-position: center;
+    padding: 60px 10%;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Efecto de texto SWEET World superpuesto */
+.brand-huge-title {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bg-text {
+    font-size: 110px;
+    font-weight: 900;
+    color: #000000;
+    letter-spacing: 2px;
+    line-height: 1;
+}
+
+.fg-text {
+    font-family: 'Great Vibes', cursive;
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    font-size: 65px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+.contact-info {
+    color: #000000;
+}
+
+.contact-info h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style: none;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* --- 5. CRÉDITOS --- */
+.footer-credits {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 15px 10px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-credits p {
+    font-size: 12px;
+    color: #555555;
+}
+
+/* --- RESPONSIVE / ADAPTACIÓN A MÓVILES --- */
+@media (max-width: 768px) {
+    .header-overlay {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .header-text {
+        text-align: center;
+    }
+    .welcome-content {
+        flex-direction: column;
+    }
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .fg-text {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .contact-info ul li {
+        justify-content: center;
+    }
+}
