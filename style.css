@@ -15,7 +15,7 @@ body {
 /* --- 1. HEADER / BANNER SUPERIOR --- */
 .main-header {
     background-image: url('imagenes/10.png'); /* Fondo de fresas difuminado u oscuro */
-    background-size: cover;
+    background-size: 1000px;
     background-position: center;
     border-bottom: 20px solid #000000;
 }
@@ -32,7 +32,7 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 150px;
 }
 
 .arrows {
