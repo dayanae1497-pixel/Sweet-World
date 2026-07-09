@@ -17,42 +17,42 @@ body {
     background-image: url('imagenes/10.png'); /* Fondo de fresas difuminado u oscuro */
     background-size: cover;
     background-position: center;
-    border-bottom: 20px solid #000000;
+    border-bottom: 10px solid #000000;
 }
 
 .header-overlay {
     background-color: rgba(0, 0, 0, 0.75); /* Fondo oscuro semitransparente */
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 80px 100%;
+    align-items: left;
+    padding: 20px 5%;
     flex-wrap: wrap;
 }
 
 .logo-container {
     display: flex;
-    align-items: center;
-    gap: 150px;
+    align-items: left;
+    gap: 70px;
 }
 
 .arrows {
     color: #e5c158; /* Dorado */
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .logo-img {
-    height: 150px;
+    height: 200px;
     object-fit: contain;
 }
-
 .header-text {
-    max-width: 700px;
+    max-width: 800px;
     color: #ffffff;
-    font-size: 25px;
-    font-weight: 300;
+    font-size: 30px;
+    font-weight: 400;
     text-align: center;
     line-height: 1.6;
+    padding: 50px;
 }
 
 /* --- 2. BIENVENIDA --- */
@@ -93,7 +93,7 @@ body {
 .welcome-text {
     flex: 1;
     min-width: 300px;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.8;
     color: #222222;
     text-align: justify;
@@ -104,7 +104,6 @@ body {
     background-image: url('imagenes/11.jpeg'); /* Fondo oscuro con pastel detrás */
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     position: relative;
     padding: 60px 5%;
     text-align: center;
@@ -174,7 +173,7 @@ body {
     background-image: url('imagenes/12.png'); /* Fondo de bizcocho/pastel texturizado claro */
     background-size: cover;
     background-position: center;
-    padding: 60px 10%;
+    padding: 60px 15%;
 }
 
 .contact-container {
@@ -192,7 +191,7 @@ body {
 }
 
 .bg-text {
-    font-size: 110px;
+    font-size: 170px;
     font-weight: 900;
     color: #000000;
     letter-spacing: 2px;
@@ -204,7 +203,7 @@ body {
     position: absolute;
     left: 20px;
     bottom: 10px;
-    font-size: 65px;
+    font-size: 100px;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
