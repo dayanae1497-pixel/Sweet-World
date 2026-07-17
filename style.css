@@ -55,6 +55,158 @@ body {
     padding: 50px;
 }
 
+/* --- CHECKBOX OCULTO (El cerebro del truco) --- */
+.menu-checkbox {
+    display: none;
+}
+
+/* --- BOTONES DE CONTROL --- */
+.sidebar-toggle-btn, .sidebar-close-btn {
+    color: #e5c158; /* Dorado */
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 999;
+    user-select: none;
+}
+
+.sidebar-toggle-btn {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+}
+
+.sidebar-close-btn {
+    display: block;
+    text-align: right;
+    margin: 10px 15px 0 0;
+}
+
+/* --- OVERLAY DE FONDO --- */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    cursor: pointer; /* Para que sepan que pueden hacer clic para cerrar */
+}
+
+/* --- BARRA LATERAL --- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px; /* Escondido a la izquierda */
+    width: 280px;
+    height: 100%;
+    background-color: #000000;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.4s cubic-bezier(0.77,0.2,0.05,1);
+    overflow-y: auto;
+}
+
+/* --- LA MAGIA: Cuando el checkbox está marcado --- */
+.menu-checkbox:checked ~ .sidebar {
+    left: 0; /* Muestra el menú */
+}
+
+.menu-checkbox:checked ~ .sidebar-overlay {
+    opacity: 1; /* Muestra el fondo oscuro */
+    visibility: visible;
+}
+
+/* --- LOGO Y MENÚ PRINCIPAL --- */
+.sidebar-logo {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sidebar-logo img {
+    max-width: 140px;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 20px;
+    border: 2px solid #ffffff;
+    margin: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: #e5c158;
+    color: #000000;
+    border-color: #e5c158;
+}
+
+/* --- SUBMENÚ DESPLEGABLE (Usando <details>) --- */
+/* Quitamos la flecha por defecto que trae HTML5 */
+details.menu-desplegable summary {
+    list-style: none;
+}
+details.menu-desplegable summary::-webkit-details-marker {
+    display: none; 
+}
+
+.submenu {
+    background-color: #111111;
+    margin: 0 20px;
+    border-radius: 0 0 4px 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: none;
+    padding: 10px 0;
+}
+
+.submenu li a {
+    display: block;
+    color: #cccccc;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: left;
+    transition: color 0.2s, padding-left 0.2s;
+}
+
+.submenu li a:hover {
+    color: #e5c158;
+    padding-left: 25px;
+}
+
+/* Animación de la flechita al abrir */
+.arrow-down {
+    font-size: 12px;
+    float: right;
+    margin-top: 5px;
+    transition: transform 0.3s;
+}
+
+details[open] .arrow-down {
+    transform: rotate(180deg);
+}
+
 /* --- 2. BIENVENIDA --- */
 .welcome-section {
     padding: 60px 10%;
