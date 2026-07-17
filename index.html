@@ -23,6 +23,46 @@
         </div>
     </header>
 
+    <!-- Checkbox oculto que controlará abrir/cerrar el menú -->
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+<!-- Botón para abrir (>>), ahora es un label conectado al checkbox -->
+    <label for="menu-toggle" class="sidebar-toggle-btn">&gt;&gt;</label>
+
+<!-- Fondo oscuro que aparece detrás del menú -->
+    <label for="menu-toggle" class="sidebar-overlay"></label>
+
+<!-- BARRA LATERAL -->
+    <aside class="sidebar">
+    <!-- Botón para cerrar (<<), también conectado al checkbox -->
+        <label for="menu-toggle" class="sidebar-close-btn">&lt;&lt;</label>
+    
+        <div class="sidebar-logo">
+            <img src="logo-sweet-world.png" alt="Sweet World"> <!-- Reemplaza por tu logo -->
+        </div>
+
+        <nav class="sidebar-menu">
+            <ul>
+                <li><a href="#inicio" class="menu-item">Inicio</a></li>
+            
+            <!-- Opción Catálogo usando <details> para desplegar sin JS -->
+                <li>
+                    <details class="menu-desplegable">
+                        <summary class="menu-item">Catálogo <span class="arrow-down">▼</span></summary>
+                        <ul class="submenu">
+                            <li><a href="#tortas">Tortas</a></li>
+                            <li><a href="#cupcakes">Cupcakes</a></li>
+                            <li><a href="#porciones">Porciones</a></li>
+                            <li><a href="#decoracion">Decoración</a></li>
+                        </ul>
+                    </details>
+                </li>
+            
+                <li><a href="#contacto" class="menu-item">Contactos</a></li>
+            </ul>
+        </nav>
+    </aside>
+    
     <section class="welcome-section">
         <h1 class="welcome-title">¡Bienvenido!</h1>
         <div class="welcome-content">
